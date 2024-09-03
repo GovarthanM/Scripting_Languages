@@ -38,21 +38,18 @@
 
     <script>
         function calculate() {
-            // Get form values
+
             let subject1 = parseInt(document.getElementById('subject1').value);
             let subject2 = parseInt(document.getElementById('subject2').value);
             let subject3 = parseInt(document.getElementById('subject3').value);
             let subject4 = parseInt(document.getElementById('subject4').value);
             let subject5 = parseInt(document.getElementById('subject5').value);
-        
-            // Calculate total and average
+
             let total = subject1 + subject2 + subject3 + subject4 + subject5;
             let average = total / 5;
-        
-            // Determine result
+
             let result = (subject1 >= 35 && subject2 >= 35 && subject3 >= 35 && subject4 >= 35 && subject5 >= 35) ? "Pass" : "Fail";
-        
-            // Determine grade
+
             let grade;
             if (average >= 90) {
                 grade = "A+";
@@ -67,8 +64,7 @@
             } else {
                 grade = "E";
             }
-        
-            // Display results
+
             document.getElementById('total').innerText = `Total Marks: ${total}`;
             document.getElementById('average').innerText = `Average Marks: ${average}`;
             document.getElementById('result').innerText = `Result: ${result}`;
